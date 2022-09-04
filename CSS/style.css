@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Dosis', sans-serif;
+    font-size: 22px;
+    background-color: #f8f6f6;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 40vh;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vh; */
+    overflow: hidden;
+    
+}
+/*############## SLIDER ##################*/
+.contenedor__slider{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    animation-name: cambio;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+.slider__img{
+    width: 100%;
+    object-fit: cover;
+    position: static;
+    top: 0;
+}
+/*################# MENU MOVILE ##############*/
+.menu{
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #585858;
+    text-align: center;
+    margin: 10px;
+    z-index: 1;
+}
+.cerrar{
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #585858;
+    text-align: center;
+    margin: 10px;
+    z-index: 1;
+}
+.invisible{
+    opacity: 0;
+    pointer-events: none;
+}
+.fa-bars{
+    margin: auto;
+    font-size: 25px;
+    color: #fff;
+}
+.fa-x{
+    margin: auto;
+    font-size: 25px;
+    color: #fff;
+}
+.menu:hover{
+    cursor: pointer;
+    background-color: #2c2c2c;
+}
+.nav__movile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000bb;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    transform: translateX(-100%);
+    transition: .3s;
+    pointer-events: unset;
+    opacity: 1;
+}
+.nav--show{
+    transform: translateX(0);
+}
+
+.nav__movile .nav__list li {
+    list-style: none;
+    margin: 20px;
+}
+.nav .nav__list li{
+    list-style: none;
+}
+.nav__list li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/*############## MENU PC ###################*/
+
+.nav{
+    position: fixed;
+    visibility: hidden;
+}
+.nav .nav__list li a{
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav .nav__list li:hover {
+    scale: 1.1;
+}
+.nav .nav__list li a:hover {
+    color: red;
+}
+
+/*############## MAIN ########################*/
+.main{
+    margin: 120px auto;
+    width: 70vw;
+}
+.main__section--1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.main__section--1 h1 {
+    text-align: center;
+    font-size: 40px;
+}
+.main__section--1 p {
+    text-align: justify;
+}
+.main__section--1 figure{
+    width: 80%;
+    margin: auto;
+    object-fit: cover;
+}
+.main__section--1 img {
+    width: 100%;
+    height: 100%; 
+    border-radius: 20px;
+}
+
+/*######################## FOOTER ################################*/
+footer{
+    color: #fff;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    display: grid;
+    grid-template-areas: 
+        "redes contacto"
+        "Copyright Copyright";
+    justify-items: center;
+    gap: 40px;
+    padding: 40px 0 20px 0;
+}
+.redes__sociales{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    grid-area: redes;
+}
+.redes__sociales div{
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+
+}
+.contactenos{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    grid-area: contacto;
+}
+.llamada, .whatsapp, .email{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+footer .copyright {
+    margin: 0 auto;
+    grid-area: Copyright;
+    font-size: 14px;
+}
+
+.fa-facebook{
+    color: #2b49f3;
+}
+.fa-instagram{
+    color: #fd4dfd;
+}
+.fa-twitter{
+    color: #2b60f3;
+}
+.fa-youtube{
+    color: #fa0404;
+}
+.fa-whatsapp{
+    color: #04d627;
+}
+.fa-envelope{
+    color: #b3adad;
+}
+.hover:hover{
+    color: #fff;
+}
+
+
+/*####################### MEDIAQUERY ##############################*/
+@media screen and (min-width: 800px) {
+    .nav{
+        width: 100%;
+        height: 50px;
+        visibility: initial;
+        background-color: #000000;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav__list{
+        display: flex;
+        justify-content: start;
+    }
+    .nav__list li{
+        padding: 0 30px;
+    }
+    .nav__list--1{
+        justify-content: end;
+    }
+
+    .nav__movile{
+        opacity: 0;
+    }
+
+    .menu{
+       opacity: 0;
+        z-index: 0;
+    }
+    .cerrar{
+        opacity: 0;
+        z-index: 0;
+    }
+    
+}
+
+
+@media screen and (min-width: 515px) {
+    
+    .contenedor__slider{
+        width: 400%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    footer{
+        grid-template-areas: 
+            "redes"
+            "contacto"
+            "Copyright";
+        gap: 50px;
+    }
+    .redes__sociales{
+        grid-area: redes;
+        
+    }
+    .contactenos{
+        grid-area: contacto;
+    }
+    
+    footer .copyrigth {
+        grid-area: Copyright;
+        font-size: 14px;
+    }
+}
+
+@keyframes cambio{
+    0% {margin-left: 0%;}
+    15% {margin-left: 0%;}
+
+    30% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    60% {margin-left: -200%;}
+    75%{margin-left: -200%;}
+
+    90% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+    
+}
