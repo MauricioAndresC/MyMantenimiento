@@ -317,3 +317,57 @@ footer .copyright {
     100% {margin-left: -300%;}
     
 }
+
+/*####################### REGISTRO ##################*/
+
+header {
+    position: relative;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+header img {
+    width: 20px;
+    margin-right: 5px;
+    position: relative;
+    bottom: -2px;
+}
+
+form {
+    text-align: center;
+    font-size: 18px;
+}
+
+form button {
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.Registro {
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 50%;
+    
+}
+
+
+.Registro label input{
+    display: block;
+    margin: 30px auto;
+    width: 70%;
+    height: 40px;
+    margin: black
+
+}
+
+form .p-checkbox {
+    position: relative;
+    right: 110px;
+
+}
+
+
+
